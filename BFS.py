@@ -20,3 +20,20 @@ class Solution:
                 if node.right:
                     queue.append(node.right)
         return result
+
+
+        ''' . or
+        while queue:
+            level = []
+            size = len(queue)
+            for i in range (size):
+                node = queue.popleft()
+                level.append(node.val)
+                #把上层节点拓展到下一次层
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+            result.append(level)
+        return result
+        '''
