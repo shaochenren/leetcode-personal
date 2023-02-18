@@ -1,4 +1,4 @@
-#BFS
+#BFS 入门算法
 class Solution:
 
     def levelorder(self,root):
