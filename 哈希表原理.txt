@@ -1,0 +1,14 @@
+the hash dorta structure is the key pair with the value
+
+the time complexity is O(1) get(key), set(key, value)
+
+进来一个key， 通过hash function 的计算，计算结果存入到算出的bucket
+hash fucntion 能保证 同样的key 能得到同样的结果，但是不同的key，也可能得到同样的结果，如果得到了同样的bucket，这就是hash的冲突
+
+冲突的解决办法：
+open hash 开哈希，通过linkedlist的方式，将算出的结果放到bucket用linked list 串起来
+
+close hash， 如果发现一个bucket被占了，回顺位占领下一个空的bucket
+
+业界中用open hash 比较多，close hash   问题较多，取值相对复杂，如果冲冲突连接，情况会1+1 >2
+
