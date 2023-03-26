@@ -7,9 +7,9 @@ def binarysearch(self,num,start,end,target):
         return False
     if num[mid] == target:
         return mid
-    if num[mid] < target:
+    if target > num[mid]:
         return binarysearch(self,num,mid+1,end,target)
     else:
-        return binarysearch(self,num,mid-1,end,target)
+        return binarysearch(self,num,start,mid+1,target)
 
     
